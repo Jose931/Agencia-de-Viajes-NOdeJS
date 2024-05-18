@@ -7,16 +7,7 @@ block contenido
 
         .row 
         blockquote.text-center Lee sobre nuestros clientes y sus experiencias
-        .row.testimoniales 
-            each comentario in comentarios 
-                .col-md-6.col-lg-4.mb-4
-                    .card 
-                        .card-body 
-                            blockquote.blockquote 
-                            p.mb-0 
-                                |  #{comentario.mensaje}
-                            footer.blockquote-footer 
-                                | #{comentario.nombre}
+        include ./layout/bloqueComentarios
 
         .row 
             .col-md-12

@@ -1,6 +1,31 @@
 extends ./layout/index 
 
+block slider 
+    .slider 
+        h1 Rio de Janeiro 
+        em aventura 
+
 block contenido
     main.container.mt-5
-        .row 
-            h1= pagina 
+        h2.text-center.mb-5 Sobre Nosotros 
+        .row.mb-5 
+            .col-md-6 
+                p Cras maximus magna sit amet pretium vestibulum. Donec suscipit sit amet nulla in posuere. Curabitur justo urna, mollis id pulvinar at, porta quis orci. Pellentesque lobortis tincidunt velit quis condimentum. In hac habitasse platea dictumst. 
+                p Aenean eu risus eu lorem rhoncus consectetur in vel sapien. Vestibulum placerat eros id ultricies egestas. Sed ac mauris at elit ultrices tristique. Mauris tortor nulla, elementum quis mi et, tincidunt volutpat purus. Aliquam ac mauris non erat congue vulputate. 
+            .col-md-6 
+                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros" class="img-fluid") 
+
+        include ./layout/bloqueViajes
+
+    .descuento 
+        .container 
+            .row 
+                .col-md-6 
+                    .contenido 
+                        h3 5% de Descuento 
+                        p.titulo Viaje Canada 
+                        p.fecha 20-Marzo-2024 - 1-Abril-202
+                        p.precio 2,500 €
+    .container 
+        h2.mt-5.text-center Comentarios 
+        include ./layout/bloqueComentarios    
