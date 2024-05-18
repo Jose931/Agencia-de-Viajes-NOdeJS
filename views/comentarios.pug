@@ -4,6 +4,20 @@ block contenido
     block contenido
     main.container.mt-5
         h1.text-center.mt-5= pagina
+
+        .row 
+        blockquote.text-center Lee sobre nuestros clientes y sus experiencias
+        .row.testimoniales 
+            each comentario in comentarios 
+                .col-md-6.col-lg-4.mb-4
+                    .card 
+                        .card-body 
+                            blockquote.blockquote 
+                            p.mb-0 
+                                |  #{comentario.mensaje}
+                            footer.blockquote-footer 
+                                | #{comentario.nombre}
+
         .row 
             .col-md-12
                 h2.d-block.w-100.text-center Agrega Comentario
@@ -13,7 +27,7 @@ block contenido
 
             .row.justify-content-center.col
                 .col-md-8 
-                    form(action="/testimoniales" method="POST")
+                    form(action="/comentarios" method="POST")
                         .form-group 
                             label(for="nombre") Nombre 
                             input#nombre(type="text", placeholder="Tu Nombre", name="nombre", class="form-control", value= nombre)   
