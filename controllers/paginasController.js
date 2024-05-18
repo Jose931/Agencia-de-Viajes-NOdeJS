@@ -22,9 +22,9 @@ const paginaViajes = async (req, res) => {
   });
 };
 
-const paginaTestimoniales = (req, res) => {
-  res.render("testimoniales", {
-    pagina: "Testimoniales",
+const paginaComentarios = (req, res) => {
+  res.render("comentarios", {
+    pagina: "Comentarios",
   });
 };
 
@@ -44,4 +44,4 @@ const paginaDetalleViaje = async (req, res) => {
     }
 }
 
-export { paginaInicio, paginaNosotros, paginaViajes, paginaTestimoniales,paginaDetalleViaje };
+export { paginaInicio, paginaNosotros, paginaViajes, paginaComentarios,paginaDetalleViaje };

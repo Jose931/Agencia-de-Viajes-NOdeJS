@@ -1,4 +1,4 @@
-const guardarTestimonial = (req, res) => {
+const guardarComentario = (req, res) => {
   //Validar
   const { nombre, correo, mensaje } = req.body;
 
@@ -18,8 +18,8 @@ const guardarTestimonial = (req, res) => {
 
   if(errores.length > 0){
     //Mostrar la vista con errores
-    res.render('testimoniales', {
-        pagina: 'Testimoniales', 
+    res.render('comentarios', {
+        pagina: 'Comentarios', 
         errores,
         nombre,
         correo,
@@ -28,4 +28,4 @@ const guardarTestimonial = (req, res) => {
   }
 };
 
-export { guardarTestimonial };
+export { guardarComentario };
